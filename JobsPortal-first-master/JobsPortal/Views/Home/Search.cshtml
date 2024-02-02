@@ -1,0 +1,25 @@
+﻿@model List<DatabaseAccessLayer.PostJobTable>
+
+@{
+    ViewBag.Title = "Search Results";
+}
+
+<h2>Search Results</h2>
+
+<table class="table">
+    <!-- Your table headers here -->
+    <tr>
+        <th>Job Title</th>
+        <!-- Add other headers as needed -->
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle)
+            </td>
+            <!-- Add other columns as needed -->
+        </tr>
+    }
+</table>
